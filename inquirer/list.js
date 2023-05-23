@@ -91,7 +91,7 @@ class List extends EventEmitter {
   }
   getContent() {
     if (this.done) {
-      return `\x1B[1m${this.message} \x1B[22m\x1B[36m${this.choices[this.selected].name}\x1B[39m\n`;
+      return `\x1B[32m?\x1B[39m \x1B[1m${this.message} \x1B[22m\x1B[36m${this.choices[this.selected].name}\x1B[39m\n`;
     } else {
       const title = `\x1B[32m?\x1B[39m \x1B[1m${this.message}(use arrow keys)\x1B[22m\n`;
       const list = this.choices.map((item, index) => {
